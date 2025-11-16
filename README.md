@@ -11,8 +11,3 @@ This project involves the analysis of manifolds learned by autoencoders.
 
 `python trainBetaVAE.py --latentDimesion 2 --learningRate 1e-4 --numEpochs 100 --dataset MNIST --betaValue 0.0 --seedVal 0`
 
-
-
-cd vaeBench/betaVAE
-conda activate vaeBench
-python trainBetaVAE.py --latentDimesion 2 --learningRate 1e-4 --numEpochs 100 --dataset MNIST --betaValue 0.0 --seedVal 0
