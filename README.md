@@ -19,3 +19,15 @@ In these experiments we use `pythae` library to get all the benchmark variationa
 
 `python trainBetaVAE.py --latentDimesion 2 --learningRate 1e-4 --numEpochs 100 --dataset MNIST --betaValue 0.0 --seedVal 0`
 
+
+### To get cluster purity plots for trained Beta- VAEs
+ 
+```
+export CUDA_VISIBLE_DEVICES=0
+cd vaeBench/betaVAE
+conda activate vaeBench
+python clusterPurityBetaVAE.py --learningRate 1e-4 --numEpochs 100 --dataset MNIST --seedVal 0 --whichBetas big
+python clusterPurityBetaVAE.py --learningRate 1e-4 --numEpochs 100 --dataset MNIST --seedVal 0 --whichBetas small
+python clusterPurityBetaVAE.py --learningRate 1e-4 --numEpochs 100 --dataset MNIST --seedVal 0 --whichBetas all
+
+```
